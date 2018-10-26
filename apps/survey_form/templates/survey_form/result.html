@@ -1,0 +1,57 @@
+<!DOCTTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h3 class="text-center">Survey:</h3>
+            <div class="container">
+                <hr class="my-4">
+                <div class="container w-50 border rounded border-success bg-light text-success pt-2 mb-2 text-center">
+                    <div class="text-success pt-2 text-center font-weight-bold">
+                        <p>Thanks for submitting this form! You have submitted this form {{ request.session.count}} times now.</p>
+                    </div>
+                </div>
+                <div class="container w-50 border rounded border-secondary bg-light py-2">
+                    <div class="row mb-2">
+                        <div class="col-sm font-weight-bold">
+                            Name:
+                        </div>
+                        <div class="col-sm">
+                            {{ request.session.name }}
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-sm font-weight-bold">
+                            Dojo Location:
+                        </div>
+                        <div class="col-sm">
+                            {{ request.session.dojo }}
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-sm font-weight-bold">
+                            Favorite Language:
+                        </div>
+                        <div class="col-sm">
+                            {{ request.session.language }}
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-sm font-weight-bold">
+                            Comment:
+                        </div>
+                        <div class="col-sm">
+                            {{ request.session.comments }}
+                        </div>
+                    </div>
+                    <a href="/" class="btn btn-primary mt-5">Go Back</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
